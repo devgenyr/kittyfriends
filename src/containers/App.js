@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import SearchBox from './SearchBox';
-import CardList from './CardList';
+import SearchBox from '../components/SearchBox';
+import CardList from '../components/CardList';
 // import { kitties } from './kitties';
-import Scroll from './Scroll';
+import Scroll from '../components/Scroll';
 import './App.css';
 
 class App extends Component {
@@ -28,22 +28,21 @@ class App extends Component {
 	};
 
 	render() {
-		const filteredKitties = this.state.kitties.filter( kitty => {
-			return kitty.name.toLowerCase().includes( this.state.searchfield.toLowerCase() );
+		const { kitties, searchfield } = this.state;
+		const filteredKitties = kitties.filter( kitty => {
+			return kitty.name.toLowerCase().includes( searchfield.toLowerCase() );
 		});
-		if ( this.state.kitties.length === 0 ) {
-			return <h1 className={'tc'}>Loading...</h1>;
-		} else {
-			return(
-					<div className={'tc'}>
-						<h1 className={'f1'}>Kitty friends</h1>
-						<SearchBox searchChange={ this.onSearchChange }/>
-						<Scroll>
-							<CardList kitties={ filteredKitties } />
-						</Scroll>
-					</div>
-			);
-		}
+		return ! kitties.length ?
+			<h1 className={'tc'}>Loading...</h1> :
+		(
+			<div className={'tc'}>
+				<h1 className={'f1'}>Kitty friends</h1>
+				<SearchBox searchChange={ this.onSearchChange }/>
+				<Scroll>
+					<CardList kitties={ filteredKitties } />
+				</Scroll>
+			</div>
+		);
 	}
 
 }
