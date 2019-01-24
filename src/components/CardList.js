@@ -2,6 +2,10 @@ import React from 'react';
 import Card from "./Card";
 
 const CardList = ({ kitties }) => {
+	/* Error boundry test
+	if (true) {
+		throw new Error('NOOOOOOooo!');
+	}*/
 	return(
 		<div>
 			{
