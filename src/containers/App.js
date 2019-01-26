@@ -8,6 +8,7 @@ import ErrorBoundry from '../components/ErrorBoundry';
 import './App.css';
 
 import { setSearchField } from "../actions";
+
 /*import mapStateToProps
 	from "react-redux/es/connect/mapStateToProps";
 import mapDispatchToProps
