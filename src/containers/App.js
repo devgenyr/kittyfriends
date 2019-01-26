@@ -17,6 +17,7 @@ class App extends Component {
 	}
 
 	componentDidMount() {
+		// console.log( this.props.store.getState() );
 		// this.setState( { kitties: kitties } );
 		// console.log( this.state );
 		fetch( 'https://jsonplaceholder.typicode.com/users' )
