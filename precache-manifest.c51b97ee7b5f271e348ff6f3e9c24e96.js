@@ -24,7 +24,7 @@ self.__precacheManifest = [
     "url": "/kittyfriends/static/css/1.9652a668.chunk.css"
   },
   {
-    "revision": "f1b085313b25b0f51cffa1af5c5b9b48",
+    "revision": "7576a14fad722c013cdd007959e3182c",
     "url": "/kittyfriends/index.html"
   }
 ];
